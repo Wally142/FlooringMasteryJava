@@ -1,25 +1,21 @@
 package com.sg.week4flooringmastery.dao;
 
-
 import com.sg.week4flooringmastery.dto.Order;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class FlooringMasteryOrderDaoStub implements FlooringMasteryOrderDao {
 
-    
     LocalDate date = LocalDate.of(2018, Month.APRIL, 3);
     private Order currentOrder;
-    
+
     List<Order> orderList = new ArrayList<>();
-    
+
     public Order stubOrder() {
-        
+
         List<Order> orderList = new ArrayList<>();
 
         Order currentOrder = new Order();
@@ -46,15 +42,14 @@ public class FlooringMasteryOrderDaoStub implements FlooringMasteryOrderDao {
         currentOrder.setTotalTax(tax);
         currentOrder.setTotalCost(total);
         currentOrder.setTimeStamp(date);
-        
-        
+
         orderList.add(currentOrder);
         return currentOrder;
     }
 
     @Override
     public Order addOrder(Order order) {
-      
+
         return order;
     }
 
